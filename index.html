@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+<style type="text/css">
+	
+	body{
+		margin-top: 70px;
+		background: maroon;
+		color: #fff;
+		/*margin: auto;*/
+	}
+
+.center {
+  margin: auto;
+  width: 100%;
+  /*border: 3px solid green;*/
+  padding: 5px;
+  padding-left: 400px;
+}
+
+
+</style>
+
+
+
+	<title>Weight Conventer</title>
+</head>
+<body class = "body1">
+
+<div class="center">
+	
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="display-4 text-center"> Weight Center</h1>
+				<form>
+					<div class="form-group">
+						<input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds..">
+					</div>
+				</form>
+
+				<div id="output" style="text-align: center;">
+					<div class="bg-primary">
+						<div class="card-block">
+							
+							<h4> Grams: </h4>
+							<div id="gramsOutput">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="output" style="text-align: center;">
+					<div class="bg-danger">
+						<div class="card-block">
+							<h4>Kilograms: </h4>
+							<div id="kgOutput"></div>
+						</div>
+					</div>
+				</div>
+				<div id="output" style="text-align: center;">
+					<div class="bg-success">
+						<div class="card-block">
+							<h4>Ounces: </h4>
+							<div id="ogOutput"></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+
+	</div>
+
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById('lbsInput').addEventListener('input', function(e){
+
+			let lbs = e.target.value;
+
+			document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+			document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+			document.getElementById('ogOutput').innerHTML = lbs*16;
+
+		});
+
+		document.getElementById('button').onclick = changeColor;
+
+function changeColor() {
+    document.background.style.color = "red";
+    return false;
+}
+
+
+
+	</script>
+
+
+
+
+</body>
+</html>
